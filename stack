@@ -1,0 +1,86 @@
+#include<iostream>
+using namespace std;
+
+//Stack implementation using Array
+class Stack {
+    int arr[1000];
+    int top;
+
+public:
+    Stack() {
+        top = -1;
+    }
+
+    //Push method
+    void push(int val) {
+        arr[++top] = val;
+    }
+
+    //Pop method
+    void pop() {
+        if(top >= 0) {
+            top--;
+        }
+    }
+
+    //Top method
+    int top() {
+        return arr[top];
+    }
+
+    //Empty method
+    bool empty() {
+        return top == -1;
+    }
+};
+
+//Stack implementation using LinkedList
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int val) {
+        data = val;
+        next = NULL;
+    }
+};
+
+class Stack {
+    Node* top;
+
+public: 
+    Stack() {
+        top = NULL;
+    }
+
+    void push(int val) {
+        Node* newNode = new Node(val);
+        newNode->next = top;
+        top = newNode;
+    }
+
+    void pop() {
+        if(top == NULL) {
+            cout << "Stack underflow\n";
+            return;
+        }
+
+        Node* toDelete = top;
+        top = top->next;
+        delete toDelete;
+    }
+
+    int top() {
+        if(top == NULL) {
+            cout << "Stack is empty\n";
+            return -1;
+        }
+
+        return top->data;
+    }
+
+    bool empty() {
+        return top == NULL;
+    }
+};
