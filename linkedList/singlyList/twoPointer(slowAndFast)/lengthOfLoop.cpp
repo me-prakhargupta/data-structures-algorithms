@@ -25,7 +25,7 @@ public:
         Node* slow = head;
         Node* fast = head;
 
-        // It first detects a cycle using slow and fast pointers.
+        // first detects a cycle using slow and fast pointers.
         while(fast && fast->next) {
             slow = slow->next;
             fast = fast->next->next;
