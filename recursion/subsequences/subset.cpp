@@ -41,6 +41,7 @@ void solve(vector<int>& nums, int idx, vector<int>& ans, vector<vector<int>>& re
         ans.pop_back();             // backtrack
     }
 }
+
 vector<vector<int>> subsetsWithDup(vector<int>& nums) {
     sort(nums.begin(), nums.end());
 

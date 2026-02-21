@@ -1,0 +1,9 @@
+Idea: Choose → Explore → Undo (classic backtracking)
+
+Why backtracking?
+All {possible / permutations / combination / subsets}
+
+Khandani Tareeka
+1. Do something
+2. Explore
+3. Revert step-1 & further explore
