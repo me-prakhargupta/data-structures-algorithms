@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-// Brute force O(n³)
+// Brute force O(n^3)
 int subarraySumMinimum(vector<int>& nums) {
     int n = nums.size();
     int subarraySum = 0;
